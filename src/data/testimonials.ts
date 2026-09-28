@@ -9,9 +9,65 @@ export type Testimonial = {
   company: string;
   quote: string;
   rating: number;
+  service?: string;
 };
 
-export const TESTIMONIALS: Testimonial[] = [];
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    name: "Daniel Carter",
+    role: "Founder",
+    company: "NovaCommerce",
+    service: "AI Customer Support Automation",
+    quote:
+      "Before working with them, our support team was spending hours answering the same repetitive questions. They built an AI customer support system that now handles a huge portion of our inquiries automatically. Response times improved dramatically, and our team can finally focus on higher-value customer issues.",
+    rating: 5,
+  },
+  {
+    name: "Sarah Mitchell",
+    role: "Founder",
+    company: "GrowthPeak Marketing",
+    service: "AI Lead Generation & Qualification",
+    quote:
+      "The AI lead generation system completely changed how we handle inbound leads. It qualifies prospects, collects the right information, and routes hot leads to our sales team automatically. We’ve saved countless hours while making sure potential customers don’t slip through the cracks.",
+    rating: 5,
+  },
+  {
+    name: "Michael Brooks",
+    role: "Founder",
+    company: "Elite Dental Group",
+    service: "AI Appointment Booking Automation",
+    quote:
+      "Our appointment process used to involve endless back-and-forth messages. Their AI automation now handles inquiries, answers common questions, and books appointments automatically. It has made the entire process much smoother for both our staff and our patients.",
+    rating: 5,
+  },
+  {
+    name: "James Anderson",
+    role: "Founder",
+    company: "Apex Consulting",
+    service: "AI Workflow & Business Process Automation",
+    quote:
+      "We had multiple manual processes spread across different tools, and it was becoming difficult to manage everything efficiently. The team mapped out our workflows and automated the repetitive tasks. What used to take our employees several hours now happens automatically in the background.",
+    rating: 5,
+  },
+  {
+    name: "Emily Richardson",
+    role: "Founder",
+    company: "ScaleHub Solutions",
+    service: "AI Sales Automation",
+    quote:
+      "Their AI sales automation helped us streamline our entire follow-up process. Leads are contacted at the right time, follow-ups happen automatically, and our sales team has a much clearer view of every prospect. It has made our sales process far more consistent.",
+    rating: 5,
+  },
+  {
+    name: "Alex Morgan",
+    role: "Founder",
+    company: "BrightPath Education",
+    service: "Custom AI Chatbot",
+    quote:
+      "We wanted an AI chatbot that actually understood our business rather than giving generic answers. They built a custom solution trained around our services and customer questions. The chatbot now provides instant answers 24/7 and has significantly reduced the number of basic inquiries our team has to handle manually.",
+    rating: 5,
+  },
+];
 
 export type UseCase = {
   industry: string;
