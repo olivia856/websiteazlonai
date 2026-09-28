@@ -18,7 +18,7 @@ All copy lives in `src/data/`:
 - `site.ts` — brand info, nav links, Calendly URL, tools list, stats
 - `services.ts` — services grid + FAQ
 - `process.ts` — the 3-step process timeline
-- `testimonials.ts` — **placeholder testimonials** — replace with real client quotes before launch
+- `testimonials.ts` — example use cases (shown until real testimonials are added) + `TESTIMONIALS` / `VIDEO_TESTIMONIALS` for real client quotes
 - `team.ts` — founder cards (photos in `public/images/`)
 
 ## Theme
