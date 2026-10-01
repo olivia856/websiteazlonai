@@ -2,6 +2,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { CALENDLY_URL, STATS } from "@/data/site";
 import { SERVICES } from "@/data/services";
 import { PROCESS_STEPS } from "@/data/process";
+import { TESTIMONIALS } from "@/data/testimonials";
 import { CTAButton } from "@/components/Button";
 import { HeroHeadline } from "@/components/HeroHeadline";
 import { GradientOrbs } from "@/components/GradientOrbs";
@@ -165,7 +166,15 @@ export default function Home() {
       <section className="py-24">
         <AnimatedSection className="mx-auto max-w-2xl px-6 text-center lg:px-8">
           <h2 className="font-display text-3xl font-bold tracking-tight lg:text-4xl">
-            What Our <span className="gold-text">Clients Say</span>
+            {TESTIMONIALS.length > 0 ? (
+              <>
+                What Our <span className="gold-text">Clients Say</span>
+              </>
+            ) : (
+              <>
+                What We <span className="gold-text">Build</span>
+              </>
+            )}
           </h2>
         </AnimatedSection>
         <div className="mt-14">
