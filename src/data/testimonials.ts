@@ -128,5 +128,28 @@ export const USE_CASES: UseCase[] = [
   },
 ];
 
-// Add client video testimonials here; the section stays hidden until one has a youtubeId.
-export const VIDEO_TESTIMONIALS: { title: string; youtubeId: string }[] = [];
+// Client video testimonials, self-hosted under public/videos. The section stays hidden when empty.
+export type VideoTestimonial = {
+  name: string;
+  country: string;
+  company: string;
+  src: string;
+  poster: string;
+};
+
+export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
+  {
+    name: "Peace",
+    country: "Nigeria",
+    company: "Digitech Tools",
+    src: "/videos/peace-digitech-tools.mp4",
+    poster: "/videos/peace-digitech-tools-poster.jpg",
+  },
+  {
+    name: "Ibrahim",
+    country: "Germany",
+    company: "Kiko Media",
+    src: "/videos/ibrahim-kiko-media.mp4",
+    poster: "/videos/ibrahim-kiko-media-poster.jpg",
+  },
+];
