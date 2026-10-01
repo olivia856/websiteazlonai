@@ -11,7 +11,7 @@ import {
 import { GradientOrbs } from "@/components/GradientOrbs";
 
 const hasTestimonials = TESTIMONIALS.length > 0;
-const videos = VIDEO_TESTIMONIALS.filter((v) => v.youtubeId);
+const videos = VIDEO_TESTIMONIALS;
 
 export const metadata: Metadata = {
   title: hasTestimonials ? "Testimonials" : "Use Cases",
@@ -70,19 +70,26 @@ export default function TestimonialsPage() {
               </h2>
             </AnimatedSection>
 
-            <StaggerGrid className="mt-12 grid gap-6 sm:grid-cols-2">
+            <StaggerGrid className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
               {videos.map((v) => (
-                <StaggerItem key={v.youtubeId}>
-                  <div className="gold-border-hover glass aspect-video overflow-hidden rounded-2xl border border-[var(--border)]">
-                    <iframe
-                      className="h-full w-full"
-                      src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}`}
-                      title={v.title}
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
+                <StaggerItem key={v.src}>
+                  <figure className="gold-border-hover glass overflow-hidden rounded-2xl border border-[var(--border)]">
+                    <video
+                      className="aspect-[9/16] w-full bg-black object-cover"
+                      src={v.src}
+                      poster={v.poster}
+                      controls
+                      playsInline
+                      preload="none"
+                      aria-label={`Video testimonial from ${v.name}, ${v.company}`}
                     />
-                  </div>
+                    <figcaption className="px-5 py-4">
+                      <p className="font-display font-semibold">{v.name}</p>
+                      <p className="text-sm text-[var(--muted)]">
+                        {v.company} · {v.country}
+                      </p>
+                    </figcaption>
+                  </figure>
                 </StaggerItem>
               ))}
             </StaggerGrid>
